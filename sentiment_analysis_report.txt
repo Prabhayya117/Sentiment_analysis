@@ -1,0 +1,53 @@
+============================================================
+SENTIMENT ANALYSIS REPORT
+============================================================
+
+OVERALL STATISTICS:
+Total messages analyzed: 2191
+Date range: 2010-01-01 00:00:00 to 2011-12-31 00:00:00
+Unique senders: 10
+Unique domains: 2
+
+SENTIMENT DISTRIBUTION:
+Neutral: 1991 (90.9%)
+Positive: 192 (8.8%)
+Negative: 8 (0.4%)
+
+TOP 10 EMPLOYEES BY SENTIMENT:
+1. don.baughman@enron.com: 3.464
+2. sally.beck@enron.com: 3.260
+3. rhonda.denton@enron.com: 3.210
+4. kayne.coulter@enron.com: 3.173
+5. bobette.riner@ipgdirect.com: 2.712
+6. lydia.delgado@enron.com: 2.538
+7. johnny.palmer@enron.com: 2.478
+8. eric.bass@enron.com: 2.367
+9. john.arnold@enron.com: 2.207
+10. patti.thompson@enron.com: 2.088
+
+EMPLOYEES AT FLIGHT RISK (Top 10):
+1. john.arnold@enron.com: Risk Score 0.103
+2. eric.bass@enron.com: Risk Score 0.075
+
+MONTHLY SENTIMENT TRENDS:
+Month		Avg Sentiment	Positive %	Message Count
+------------------------------------------------------------
+2011-07	0.017		13.2%		91.0
+2011-08	0.011		3.3%		91.0
+2011-09	0.020		11.0%		91.0
+2011-10	0.014		8.8%		91.0
+2011-11	0.013		6.5%		92.0
+2011-12	0.012		10.9%		92.0
+
+SENTIMENT TREND MODEL:
+R² Score: 0.144
+Mean Squared Error: 0.000
+Slope: 0.000
+Intercept: 0.012
+
+RECOMMENDATIONS:
+1. Monitor employees with low sentiment scores for potential issues
+2. Implement regular sentiment surveys to track trends
+3. Focus on improving communication channels for negative sentiment
+4. Recognize and reward employees with consistently positive sentiment
+5. Use sentiment trends to predict and prevent employee turnover

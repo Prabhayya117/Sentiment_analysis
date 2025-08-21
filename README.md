@@ -125,6 +125,34 @@ self.negative_words.update(['your', 'custom', 'words'])
 3. Make your changes
 4. Submit a pull request
 
----
+### ⚠️ Important Considerations & Best Practices
 
-**Ready to analyze your customer sentiment?** Just run `python simple_sentiment_analysis.py` and get instant insights! 🚀
+#### 1. Sentiment Thresholds: Domain-Specific Justification
+- **Do not use arbitrary cutoffs!** Sentiment thresholds (e.g., what counts as "neutral") should be validated for your data. The default (compound >= 0.05: Positive, <= -0.05: Negative) is a starting point, but you must check if it fits your domain (e.g., emails vs. tweets). Use labeled data or domain expert review to tune these values.
+
+#### 2. Model & Tool Limitations
+- **This tool uses a simple, rule-based sentiment analyzer.** It may not capture sarcasm, formal tone, or domain-specific language. Relying on a single tool (like TextBlob, VADER, or this script) can lead to bias. For critical applications, compare outputs from multiple models and validate against a sample of your data.
+
+#### 3. Always Interpret Outputs
+- **Charts and metrics are not self-explanatory.** Every visualization or metric (e.g., time series, employee ranking) should be accompanied by an explanation: What does it show? Why does it matter? What could cause the observed trend?
+
+#### 4. Metric Design: Avoid Arbitrary Formulas
+- **All new metrics (e.g., composite score, risk score) are explained in the code and report.** Do not invent metrics without a clear rationale. If you change or add metrics, document your reasoning and test if they reflect real-world outcomes.
+
+#### 5. Human-in-the-Loop: Validate AI Outputs
+- **Never copy AI results blindly.** Always cross-check outputs (charts, predictions, classifications) with raw data and domain knowledge. Look for mismatches or errors (e.g., all neutral reviews marked negative due to sarcasm).
+
+#### 6. Thoughtful Feature Selection
+- **Only use features that logically affect your target.** Avoid including irrelevant data (e.g., email font size) in predictive models. Use domain knowledge and feature importance tools to guide selection.
+
+#### 7. Model Evaluation: Context Matters
+- **R² and MSE tell different stories.** High R² with high MSE may mean your model fits the trend but misses the scale. Always interpret metrics in the context of your data and business goals.
+
+#### 8. Cross-Verification is Essential
+- **Validate all AI-generated outputs.** If a chart or prediction contradicts known data, investigate. Use multiple sources and manual checks.
+
+#### 9. Cohesive Narrative
+- **Analysis is more than numbers.** Connect your findings: How do sentiment trends, employee rankings, and risk scores relate? What story does the data tell?
+
+#### 10. Use AI as a Tool, Not a Decision-Maker
+- **Break down tasks, experiment, and interpret.** Don’t treat the AI as a black box. Ask questions, try variations, and use your judgment to guide the analysis.
